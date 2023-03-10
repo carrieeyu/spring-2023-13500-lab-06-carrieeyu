@@ -6,17 +6,22 @@
 
 int main()
 {
+  //shiftChar
+  std:: cout << shiftChar('a', 3) << std:: endl;
+  std:: cout << shiftChar('y', 5) << std:: endl;
+  std:: cout << shiftChar('Z', 3) << std:: endl;
+  
   //Task B; Caesar cipher encryption
-  std:: cout << encryptCaesar("Way to Go!", 5) << std:: endl; ////output: "Bfd yt Lt!"
+  std:: cout << encryptCaesar("Way to Go!", 5) << std:: endl; 
+  std:: cout << encryptCaesar("Sleep Good", 2) << std:: endl; 
 
   //Task C; Vigenere cipher encryption
-//encryptVigenere(std:: string plaintext, std:: string keyword);
   std:: cout << encryptVigenere("Hello, World!", "cake") << std:: endl;
+  std:: cout << encryptVigenere("help me!", "app") << std:: endl;
 
-//Task D; Decryption
-//decryptCaesar(ciphertext, rshift) == plaintext
-//decryptVigenere(ciphertext, keyword) == plaintext
+  //Task D; Decryption
   std:: cout << decryptCaesar("Rovvy, Gybvn!", 10) << std:: endl;
   std:: cout << decryptVigenere("Jevpq, Wyvnd!", "cake") << std:: endl;
-
 }
+
+
