@@ -24,4 +24,4 @@ vigenere.o: vigenere.cpp vigenere.h
 decryption.o: decryption.cpp decryption.h
 
 clean:
-	rm -f main.o funcs.o tests.o test-ascii.o caesar.o vigenere.o decryption.o
+	rm -f main main.o funcs.o tests.o test-ascii.o caesar.o vigenere.o decryption.o
