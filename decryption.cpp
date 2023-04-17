@@ -48,7 +48,7 @@ double stringFrequency(char c, std:: string str){
 
 }
 
-//helper func to stringFrequecny, which focuses on a single char rather than the entire string
+//helper func to stringFrequecny; focuses on entire string rather than a single char
 std:: vector <double> entireStringFreq(std:: string str){
 
   std:: vector <double> entireString; //vector array to store frequencies of all chars
@@ -78,7 +78,7 @@ double distance(std:: vector <double> array1, std:: vector <double> array2){
 
 std:: string solve(std:: string encrypted_string){
 
-  //frequences of encrypted_string and the English alphabet
+  //frequencies of encrypted_string and the English alphabet
   std:: vector <double> thisVectorEncrypted = entireStringFreq(encrypted_string); 
   std:: vector <double> alphabetFreq = {8.2, 1.5, 2.8, 4.3, 12.7, 2.2, 2.0, 6.1, 7.0, 0.2, 0.8, 4.0, 2.4, 6.8, 7.6, 1.9, 0.1, 6.0, 6.3, 9.1, 2.8, 1.0, 2.4, 0.2, 2.0, 0.074}; 
 
@@ -88,7 +88,7 @@ std:: string solve(std:: string encrypted_string){
   for(int i = 0; i < 26; i++){
     std:: string decryptThisString = decryptCaesar(encrypted_string,i); //decryption of encrypted_string
     std:: vector <double> freqOfThisDecryptedString = entireStringFreq(decryptThisString); //frequencies of all chars from the decrypted 
-   double distanceBtwn = distance(freqOfThisDecryptedString, alphabetFreq); //distance bwtn the decrypted frequencies and the English alphabet
+    double distanceBtwn = distance(freqOfThisDecryptedString, alphabetFreq); //distance bwtn the decrypted frequencies and the English alphabet
 
     //finding the rotation with the smallest distance
     if(distanceBtwn < minimum){ 
